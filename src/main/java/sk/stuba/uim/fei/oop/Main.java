@@ -27,17 +27,23 @@ public class Main {
         parametar[3] = new String("vek");
 
         ispis(studenti);
-
         String smer_t ="";
-        smer_t = Zklavesnice.readString("Zadajte smer tredenia:");
+        do{
+            smer_t = Zklavesnice.readString("Zadajte smer tredenia:");
+        }while(!(smer_t.equals("opadajuci") || smer_t.equals("rastuci") ));
+
         String parameter_t ="";
-        parameter_t = Zklavesnice.readString("Zadajte parameter tredenia:");
+        do{
+            parameter_t = Zklavesnice.readString("Zadajte parameter tredenia:");
+        }while(!(parameter_t.equals("ID") || parameter_t.equals("meno") || parameter_t.equals("priezvisko")|| parameter_t.equals("vek")));
+
+
 
         quick_sort(studenti, smer_t, parameter_t);
         System.out.println("Posle Sorta : \n\n");
         ispis(studenti);
         /*
-        String prvi = new String("abd");
+        String prvi = new String("abd");-
         String drugi = new String("ab");
 
         System.out.println(prvi.compareTo(drugi));*/
