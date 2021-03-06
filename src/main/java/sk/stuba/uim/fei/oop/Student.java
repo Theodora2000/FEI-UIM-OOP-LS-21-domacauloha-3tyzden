@@ -45,5 +45,12 @@ public class Student {
         this.vek = vek;
     }
 
+    @Override
+    public String toString(){
+        String Str = "Student sa info:";
+        Str += "\n id :" + id + " \n meno : " + meno + " \n priezvisko: " + priezvisko + "\n vek : " + vek + "\n";
+        return Str;
+    }
+
 
 }
